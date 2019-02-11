@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -7,8 +7,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="js/myscript.js"></script>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <script src="external/jquery/jquery.js"></script>
+  <script src="jquery-ui.min.js"></script>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script type = "text/javascript">
+  function triangle () {
+    var A = dimension1;
+    var B = dimension2;
+    var C = dimension3;
+    if ((A + B > C) && (B + C > A) && (A + C > B)){
+      window.alert("These values could form a triangle")
+      if (A == B == C)
+      {
+        window.alert("This is an equilateral triangle")
+      };
+      else if (A == B =! C || A == C =! B || B == C =! A)
+      {
+        window.alert("This is an isosceles triangle")
+      };
+      else
+      {
+        window.alert("This is a scalene triangle")
+      };
+    };
+    else{
+      window.alert("These values could not form a triangle")
+    };
+  };
+  </script>
   </head>
 <body>
   <h1> The awesome triangle tracker </h1>
@@ -21,7 +48,7 @@
       <input type="number" name="dimension2"><br>
       Enter your third dimension:<br>
       <input type="number" name="dimension3"><br>
-      <button onclick="function triangle()"> Submit </button><br>
+      <button onclick="triangle();"> Submit </button><br>
   </form>
 </body>
 </html>
